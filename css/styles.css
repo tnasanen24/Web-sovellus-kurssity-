@@ -12,7 +12,7 @@
     --dark-color: #E3DCC2; */
     
     --foreground-color: #240b0b;
-    --background-color: #121212;
+    --background-color: #2e1919;
     --surface-color: #1e1e1e;
     --primary-color: #bb86fc;
     --secondary-color: #03dac6;
@@ -37,14 +37,25 @@ html, body {
     box-sizing: border-box;
 }
 
+.info {
+    padding: 0.5em;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    font-weight: 400;
+    margin-top: var(--general-margin);
+}
+
 header {
-    margin-top: 1em;
     font-weight: bold;
     font-size: large;
 }
 
+header#second_page {
+    margin-top: var(--general-margin);
+}
+
 div p {
-    margin-bottom: 1em;
+    margin-bottom: var(--general-margin);
 }
 
 div#container {
@@ -82,16 +93,17 @@ a:hover {
 }
 
 nav {
-    display: inherit;
-    border-top: 1px solid var(--foreground-color);
-    border-bottom: 1px solid var(--foreground-color);
+    display: flex;
     height: 40px;
-    background-color: var();
+    width: 100%;
     background-color: var(--foreground-color);
+    align-items: center;
 }
 
 nav ul {
-    padding-left: calc(var(--general-padding) * 4);
+    display: flex;
+    flex-direction: row;
+    padding-left: calc(var(--general-padding));
 }
 
 nav li {
@@ -102,15 +114,15 @@ nav li {
 
 .parking-box {
     flex: 1 1 250px;
-    max-width: 250px; 
+    max-width: 300px; 
     cursor: pointer; 
     border: 1px solid #ccc; 
     padding: 10px;
-
+    margin: auto;
 }
 
 footer {
-    display: inherit;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
@@ -122,6 +134,25 @@ footer {
         display: flex;
         flex-wrap: wrap;
         gap: 1em;
+    }
+}
+
+@media only screen and (max-height: 799px) {
+    #map { height: 256px; }
+}
+
+@media only screen and (min-height: 1050px) {
+    #map { height: 768px; }
+}
+
+@media only screen and (min-height: 1300px) {
+    #map { height: 1024px; }
+}
+
+@media (max-width: 600px) {
+
+    nav li {
+        width: auto;
     }
 }
 

@@ -34,7 +34,7 @@ fetch("https://api.oulunliikenne.fi/proxy/graphql", {
             ID: ${park.carParkId}<br>
             Lat: ${park.lat}<br> 
             Lon: ${park.lon}<br>
-            ${park.maxCapacity != null ? `Capacity: ${park.maxCapacity}<br>` : 'Open space. No information.'}
+            ${park.maxCapacity != null ? `Capacity: ${park.maxCapacity}<br>` : 'Open space.<br>No information.'}
             ${park.spacesAvailable != null ? `Available: ${park.spacesAvailable}<br>` : ''}
         </div>
     `).join('');
