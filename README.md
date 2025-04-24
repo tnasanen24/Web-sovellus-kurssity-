@@ -1,4 +1,4 @@
-# Web-sovellus-kurssity-
+# Web-sovellus-kurssityo
 
 ## General information
 This repository contains source code for a web application that uses Digitransit API map tiles and Oulunliikenne API information about parking garages/open space parking and their location, capacity and available spaces.
