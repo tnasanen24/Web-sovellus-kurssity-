@@ -69,7 +69,7 @@ nav ul {
 }
 
 nav li {
-    border-right: 1px solid;
+    border-left: 1px solid;
     display: inline-block;
     min-width: 5em;
 }
